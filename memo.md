@@ -20,6 +20,14 @@ fname=$(basename "$htmlfile" .html)
 # -mtime -n nより未来 4日前から未来
 # -mtime +n nより過去 2日前から過去
 # -mtime n+1 n+1前から、n日前まで
+# FreeBSDでは、-mtime +nのよきに端数の時間を切り上げるため、
+# -mtime +1で「1日前よりも過去」となる。
 find $logdir -name "*.sh" -mtime -4 -mtime +1 -print
 ```
+### FreeBSD
+１. 使い勝手がUNIXっぽい
+２. タダで使える
+３. 中身が公開されている（オープンソース）
+#### UNIXとLinuxの違い
+UNIXが師匠でLinuxが弟子
 
