@@ -13,7 +13,7 @@ sed -n 's/^.*<title>\(.*\)<\/title>.*$/\1/p' $htmlfile > output/${fname}.txt
 # ファイルの拡張子を取り除きたい時に使う
 fname=$(basename "$htmlfile" .html)
 ```
-### No.30
+### No.030
 ```bash
 # 4日前から2日前までに更新されたファイル一覧を表示する
 # -mtime オプション
@@ -31,3 +31,23 @@ find $logdir -name "*.sh" -mtime -4 -mtime +1 -print
 #### UNIXとLinuxの違い
 UNIXが師匠でLinuxが弟子
 
+### No.031
+```bash
+# 最終変更日時が1年以上前の古いファイルを削除する
+# xargsコマンド主な使い方は、
+# findコマンドで特定の条件にマッチするファイルリストを出力し、
+# それをパイプでxargsコマンドが受け取って処理する。
+# rmコマンド
+# -f オプション 該当ファイルが1つもないときにエラーとならないようにする
+# -v オプション 削除したファイル名を表示する
+# ファイル名に空白文字（スペース）を含む場合は、エラーとなるため
+# 文字列の区切りに空白ではなく、ヌル文字が使われているとみなす、
+# オプションを使う
+# find -print0 | xargs -0
+# find $logdir -name "*.log" -mtime +364 -print0 | xargs -0 rm -fv
+find $logdir -name "*.log" -mtime +364 -print | xargs rm -fv #1
+```
+#### パッチ（patch）
+ソフトに変更を加えるために用意された、後付けのプログラムのこと
+* おかしなところを直す
+* ソフトをパワーアップさせる
