@@ -25,9 +25,9 @@ fname=$(basename "$htmlfile" .html)
 find $logdir -name "*.sh" -mtime -4 -mtime +1 -print
 ```
 ### FreeBSD
-１. 使い勝手がUNIXっぽい
-２. タダで使える
-３. 中身が公開されている（オープンソース）
+* 使い勝手がUNIXっぽい
+* タダで使える
+* 中身が公開されている（オープンソース）
 #### UNIXとLinuxの違い
 UNIXが師匠でLinuxが弟子
 
