@@ -112,3 +112,17 @@ rsync -av "$log_dir" "$backup_dir"
 # そのディレクトリの中のファイル、サブディレクトリ全て」を意味する
 rsync [オプション] <コピー元> <コピー先>
 ```
+
+### No.035
+#### リモートホスト
+* ネットワークでつながっている相手方のPC
+* 接続してきた相手のホスト名かIPアドレスのこと
+
+```bash
+#!/bin/bash
+#「-」オプションで標準出力にtarアーカイブを出力する。
+# パイプで受け取り、catコマンドでリダイレクトして、tarファイルを
+# 作成する。
+# tar cvf - myapp/log | ssh ${username}@${server} "cat > /backup/myapplog.tar" #2
+tar cvf - "tmp001" | cat > /Users/mfunaki/workspace/shellscript-study/tmp002/tmp001.tar
+```

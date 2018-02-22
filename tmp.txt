@@ -1,0 +1,3 @@
+a tmp001
+a tmp001/tmp001.log
+a tmp001/tmp002.log
