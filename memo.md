@@ -196,3 +196,13 @@ readonly SCRIPT_NAME=${0##*/}
 # tmp001.tarに引数で指定したファイルを追加する。
 tar rvf "/Users/mfunaki/workspace/shellscript-study/tmp002/tmp001.tar" "$1"
 ```
+
+### No.040
+#### umaskコマンド
+パーミッションの既定値を決めるときに使う。
+
+#### recursive
+ある作業中にさらに同じ作業を呼び出して処理する。
+
+#### preserve
+保護する
