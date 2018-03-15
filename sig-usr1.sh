@@ -11,7 +11,7 @@ count=0
 server="192.168.2.105"
 
 # シグナルUSR1にトラップを設定。現在の$countを表示する 3
-trap 'echo "Try count: $count"' USR1
+trap 'echo "Try count: $count"' USR1ps 
 
 # ncコマンドでの連続通信テストのループ 4
 while [ "$count" -le 1000 ]
