@@ -1,0 +1,11 @@
+PING 172.16.128.20 (172.16.128.20): 56 data bytes
+64 bytes from 172.16.128.20: icmp_seq=0 ttl=64 time=0.404 ms
+64 bytes from 172.16.128.20: icmp_seq=1 ttl=64 time=0.440 ms
+64 bytes from 172.16.128.20: icmp_seq=2 ttl=64 time=0.466 ms
+64 bytes from 172.16.128.20: icmp_seq=3 ttl=64 time=0.467 ms
+64 bytes from 172.16.128.20: icmp_seq=4 ttl=64 time=0.621 ms
+64 bytes from 172.16.128.20: icmp_seq=5 ttl=64 time=0.368 ms
+
+--- 172.16.128.20 ping statistics ---
+6 packets transmitted, 6 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 0.368/0.461/0.621/0.080 ms
